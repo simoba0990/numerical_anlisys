@@ -1,2 +1,3 @@
-The folowing files are elaborations taken from my academic experience in numerical analisys (written in matlab) solving linear systems, linear differnatial equations systems (with eulerian discretization techniques)
-and integrations
+The folowing files are elaborations taken from my academic experience in numerical analisys (written in matlab) solving linear systems 
+of linear equations (triangular, bidiagonal matrices), LU factorizations, Cholesky decomposition, linear differential equations, 
+Crank-Nicolson and integration (euler method).

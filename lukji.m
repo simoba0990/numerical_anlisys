@@ -1,14 +1,12 @@
-function [A] = lukji(A)
-%function che effettua la fattorizzazione LU
-%U è memorizzara direattamente nella parte triangolare superiore di A(diagonale inclusa)
-%mentre L nella parte triangolare inferiore stretta, sapendo che i valori sulla diag sono pari a 1 
-%sovrascriviamo direttamente su A, L=tril(A,-1)+eye(n), U=triu(A)
+function A = lukji(A)
+%si fattorizza la matrice non singolare A in LU
+%Si salva la matrice su A sapendo che nella diag princ sono tutti 1 e che U è triang super e L triang inf
 n=size(A,1);
 for k=1:n-1
     for i=k+1:n
-        A(i,k)=A(i,k)/A(k,k); %costruzione moltiplicatore
+        A(i,k)=A(i,k)/A(k,k);
         for j=k+1:n
-            A(i,j)=A(i,j)-A(i,k)*A(k,j); %aij - moltiplicatore*akj
+            A(i,j)=A(i,j)-A(i,k)*A(k,j);
         end
     end
 end

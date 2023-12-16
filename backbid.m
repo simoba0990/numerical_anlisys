@@ -1,5 +1,4 @@
-function [x] = backbid(alpha,c,f)
-%function che risolve un sistema lineare quadrato bidiagonale superiore
+function x = backbid(alpha,c,f) %risoluzione all'indietro sistema bidiagonale Ux=y con metodo Thomas
 [n,m]=size(f);
 x=zeros(n,1);
 x(n)=f(n)/alpha(n);

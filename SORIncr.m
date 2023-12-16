@@ -1,6 +1,4 @@
 function [x,iter] = SORIncr(A,b,x0,nmax,tol,omega)
-%Funzione che risolve un sistema lineare utilizzando il metodo SOR
-%con criterio d'arresto sull'incremento
 n=size(A,1);
 iter=0;
 x=zeros(n,1);

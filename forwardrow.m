@@ -1,9 +1,11 @@
-function [x] = forwardrow(L,b)
-%Funciotn che risolve sistema lineare quadrato triangolare inferiore
-n=size(L,1);       %ritorna la size della prima dimensione, ossia le righe
+function x = forwardrow(L,b) %risoluzione sistema lineare a partire da matrice triangolare inferiore
+n=size(L,1);
 x=zeros(n,1);
-for i=1:n        %ipotizziamo che la matrice sia quadrata, senza verifica
-    x(i)=(b(i)-L(i,1:i-1)*x(1:i-1))/L(i,i); %prodotto scalare tra vettore riga della matrice 
-                                            %e vettore soluzione calcolato all'iterazione prcedente
+if n==1
+    x=b./L;
+else
+    for i=1:n
+       x(i)=(b(i)-L(i,1:i-1)*x(1:i-1))./L(i,i);
+    end
 end
 end

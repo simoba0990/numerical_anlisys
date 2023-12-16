@@ -1,7 +1,5 @@
-function [x,iter,errvec] = newtonsys(Ffun,Jfun,x0,tol,nmax,p)
-%Funzione che implementa il metodo di Newton modificato per la risoluzione
-%di sistemi di equazioni non lineari
-iter=0;
+function [x,iter,errvec] = newtonsys(Ffun,Jfun,x0,tol,nmax,p) &x0 specifica il vettore iniziale, tol la tolleranza del metodo, nmax il
+iter=0;                                                       &il numero massimo di iterazioni
 x=x0;
 err=tol+1;
 errvec=[];

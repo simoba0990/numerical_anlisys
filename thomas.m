@@ -1,8 +1,5 @@
-function [alpha,beta] = thomas(a,b,c) %a rappresenta il vettore della diagonale principale, b della diagonale inferiore
-                                      %c della diagonale superiore della
-                                      %matrice A
-%function che implementa Thomas       
-n=size(a);
+function [alpha,beta] = thomas(a,b,c) %alpha e beta sono i vettori da calcolare perché nella matrice di output abbiamo sempre 1 nella diag princ
+n=size(a);                            %e la diagonale superiore a quella principale è data dal vettore c
 alpha=zeros(n);
 beta=zeros(n);
 b=[0;b];

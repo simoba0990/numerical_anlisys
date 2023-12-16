@@ -1,6 +1,4 @@
-function [x] = forwbid(beta,f)
-%Funzione che risolve un sistema lineare con matrice dei coefficienti
-%bidiagonale inferiore
+function x = forwbid(beta,f) %risoluzione in avanti sistema bidiagonale in particolare Ly=f 
 [n, m]=size(f);
 x=zeros(n,1);
 beta=[0;beta];

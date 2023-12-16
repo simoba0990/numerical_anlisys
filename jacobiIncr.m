@@ -1,6 +1,4 @@
 function [x,iter] = jacobiIncr(A,b,x0,nmax,tol)
-%Funzione che risolve un sistema lineare utilizzando il metodo di Jacobi
-%con criterio d'arresto sull'incremento
 n=size(A,1);
 iter=0;
 err=tol+1;
